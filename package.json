@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/MarcioBBS/LA-surf-class/issues"
   },
-  "homepage": "https://github.com/MarcioBBS/LA-surf-class#readme"
+  "homepage": "https://github.com/MarcioBBS/LA-surf-class#readme",
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  }
 }
