@@ -17,3 +17,10 @@ body {
 
 /* HERO HEADER */
 /* HERO HEADER */
+.header {
+  height: 90vh;
+  background-image: linear-gradient(to right bottom, rgba(128, 179, 255, 0.8), rgba(26, 117, 255, 0.8)), url(../img/pier.jpg);
+  background-size: cover;
+  background-position: center;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0% 100%); }
