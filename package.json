@@ -4,7 +4,7 @@
   "description": "Surf class website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile:sass":  "node-sass sass/main.scss css/style.css -w"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/MarcioBBS/LA-surf-class/issues"
   },
-  "homepage": "https://github.com/MarcioBBS/LA-surf-class#readme"
+  "homepage": "https://github.com/MarcioBBS/LA-surf-class#readme",
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  }
 }

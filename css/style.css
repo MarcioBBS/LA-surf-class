@@ -1,0 +1,26 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  /*
+    * 16px is the default value for most of the browsers.
+    * 62.5% of 16px is 10px which is equal to 1rem. 1rem is much easier to calculate throughout the website and more responsive robust 
+    */
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+/* HERO HEADER */
+/* HERO HEADER */
+.header {
+  height: 90vh;
+  background-image: linear-gradient(to right bottom, rgba(128, 179, 255, 0.8), rgba(26, 117, 255, 0.8)), url(../img/pier.jpg);
+  background-size: cover;
+  background-position: center;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0% 100%); }
