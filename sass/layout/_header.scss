@@ -8,7 +8,18 @@
         url(../img/pier.jpg);
         background-size: cover;
         background-position: center;
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
-        clip-path: polygon(0 0, 100% 0, 100% 80vh, 0% 100%);
+      
+        -webkit-clip-path: ellipse(58% 48% at 49% 22%);
+        clip-path: ellipse(70% 57% at 50% 40%);
+
+        &__logo-box {
+            position: absolute;
+            top: 4rem;
+            left: 4rem;
+        }
+
+        &__logo {
+            height: 10rem;            
+        }
 
 }
