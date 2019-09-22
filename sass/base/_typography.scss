@@ -8,14 +8,16 @@ body {
 .heading-primary {
     color: $color-grey-light-1;
     text-transform: uppercase;
-
+    overflow: hidden; // Correcting the "shaking during the end of the animation.
     backface-visibility: hidden;  //backface-visibility sets whether the back face of an element is visible when turned towards the user.    
 
     &--main {
         display: block;
         font-size: 6rem;
         font-weight: 400;
-        letter-spacing: 2rem;    
+        letter-spacing: 2rem;
+        animation: moveInLeft 1s ease-out; // ease-out: starts quickly, slowing down the animation continues;
+        
     }
 
     &--sub {
@@ -23,5 +25,6 @@ body {
         font-size: 2rem;
         font-weight: 700;
         letter-spacing: 1.5rem;
+        animation: moveInRight 1s cubic-bezier(.07,.22,.94,.31);
     }
 }

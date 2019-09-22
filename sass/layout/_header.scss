@@ -1,6 +1,6 @@
 /* HERO HEADER */
 .header {
-    height: 90vh;
+    height: 97vh;
     background-image: linear-gradient(
         to right bottom,
         rgba($color-primary-light, .8),
@@ -10,7 +10,7 @@
         background-position: center;
       
         -webkit-clip-path: ellipse(58% 48% at 49% 22%);
-        clip-path: ellipse(70% 57% at 50% 40%);
+        clip-path: ellipse(100% 70% at 17% 30%);
 
         &__logo-box {
             position: absolute;
@@ -19,7 +19,7 @@
         }
 
         &__logo {
-            height: 10rem;            
+            height: 10rem;    
         }
 
         &__text-box {
