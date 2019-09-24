@@ -27,5 +27,27 @@ body {
         font-weight: 700;
         letter-spacing: 1.5rem;
         animation: moveInRight 1s cubic-bezier(.07,.22,.94,.31);
+    }   
+}
+
+.heading-secondary {
+    display: inline-block;
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    transition: all .4s;
+    
+    //for linear-gradient effect
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark );
+    -webkit-background-clip: text;
+    color: transparent;
+
+    &:hover {
+        background-image: linear-gradient(to left, $color-primary-light, $color-primary-dark );
+        -webkit-background-clip: text;
+        color: transparent;
+        letter-spacing: .3rem;
     }
+    
 }

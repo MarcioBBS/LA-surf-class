@@ -71,6 +71,25 @@ body {
     letter-spacing: 1.5rem;
     animation: moveInRight 1s cubic-bezier(0.07, 0.22, 0.94, 0.31); }
 
+.heading-secondary {
+  display: inline-block;
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  transition: all .4s;
+  background-image: linear-gradient(to right, #2a7fda, #1a487a);
+  -webkit-background-clip: text;
+  color: transparent; }
+  .heading-secondary:hover {
+    background-image: linear-gradient(to left, #2a7fda, #1a487a);
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: .3rem; }
+
+.u-center-text {
+  text-align: center !important; }
+
 .u-margin-bottom-small {
   margin-bottom: 1.5rem !important; }
 
@@ -160,3 +179,8 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
+
+.serction-about {
+  background-color: #eee;
+  padding: 25rem;
+  margin-top: -30vh; }
