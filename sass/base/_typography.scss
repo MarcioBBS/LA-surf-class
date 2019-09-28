@@ -1,0 +1,67 @@
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.7; // 1.7 bigger than the pre-defined line-height
+    color: $color-grey-dark;
+    padding: 1.5rem;
+}
+
+.heading-primary {
+    color: $color-grey-light-1;
+    text-transform: uppercase;
+    overflow: hidden; // Correcting the "shaking during the end of the animation.
+    backface-visibility: hidden;  //backface-visibility sets whether the back face of an element is visible when turned towards the user.
+    margin-bottom: 6rem;
+
+    &--main {
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 2rem;
+        animation: moveInLeft 1s ease-out; // ease-out: starts quickly, slowing down the animation continues;
+        
+    }
+
+    &--sub {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.5rem;
+        animation: moveInRight 1s cubic-bezier(.07,.22,.94,.31);
+    }   
+}
+
+.heading-secondary {
+    display: inline-block;
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    transition: all .4s;
+    
+    //for linear-gradient effect
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark );
+    -webkit-background-clip: text;
+    color: transparent;
+
+    &:hover {
+        background-image: linear-gradient(to left, $color-primary-light, $color-primary-dark );
+        -webkit-background-clip: text;
+        color: transparent;
+        letter-spacing: .3rem;
+    }
+    
+}
+
+.heading-tertiary {
+    text-transform: uppercase;
+    font-size: $default-font-size;
+    font-weight: 700;
+}
+
+.paragraph {
+    font-size: $default-font-size;
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+}
