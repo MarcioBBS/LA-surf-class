@@ -2,7 +2,8 @@ body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
     line-height: 1.7; // 1.7 bigger than the pre-defined line-height
-    color: $color-grey-dark-3;
+    color: $color-grey-dark;
+    padding: 1.5rem;
 }
 
 .heading-primary {
@@ -50,4 +51,17 @@ body {
         letter-spacing: .3rem;
     }
     
+}
+
+.heading-tertiary {
+    text-transform: uppercase;
+    font-size: $default-font-size;
+    font-weight: 700;
+}
+
+.paragraph {
+    font-size: $default-font-size;
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
 }
