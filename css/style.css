@@ -187,6 +187,33 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   transform: translateY(0); }
 
+.composition {
+  position: relative; }
+  .composition__photo {
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    z-index: 10;
+    position: absolute;
+    outline-offset: 2rem;
+    transition: all .3s; }
+    .composition__photo--p1 {
+      top: -2rem;
+      left: 0; }
+    .composition__photo--p2 {
+      top: 2rem;
+      right: 0; }
+    .composition__photo--p3 {
+      top: 10rem;
+      left: 20%; }
+    .composition__photo:hover {
+      outline: 1.5rem solid #2160a2;
+      z-index: 20;
+      transform: scale(1.05);
+      box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.15); }
+  .composition:hover .composition__photo:not(:hover) {
+    transform: scale(1) translateY(-1rem); }
+
 .row {
   width: 114rem;
   margin: 0 auto; }
