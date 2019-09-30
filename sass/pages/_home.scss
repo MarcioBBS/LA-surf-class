@@ -6,7 +6,7 @@
 }
 
 .section-feature {
-    padding: 20rem 0;
+    padding: 15rem 0;
     background-image: linear-gradient(
         to right bottom,
         rgba($color-primary-light, .8),
@@ -17,11 +17,4 @@
     -webkit-clip-path: ellipse(100% 63% at 73% 65%);
     clip-path: ellipse(100% 63% at 73% 65%);
     margin-top: -18rem;
-    
-    //Getting the direct child
-   
-    // & > * {
-    //     transform: skew(7deg);
-    // }
-   
 }

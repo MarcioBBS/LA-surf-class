@@ -287,7 +287,7 @@ body {
   margin-top: -30vh; }
 
 .section-feature {
-  padding: 20rem 0;
+  padding: 15rem 0;
   background-image: linear-gradient(to right bottom, rgba(69, 148, 231, 0.8), rgba(19, 62, 107, 0.8)), url(../img/board-boots.jpg);
   background-size: cover;
   -webkit-clip-path: ellipse(100% 63% at 73% 65%);
