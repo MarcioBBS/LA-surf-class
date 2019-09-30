@@ -40,12 +40,12 @@ body {
     transition: all .4s;
     
     //for linear-gradient effect
-    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark );
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
     -webkit-background-clip: text;
     color: transparent;
 
     &:hover {
-        background-image: linear-gradient(to left, $color-primary-light, $color-primary-dark );
+        background-image: linear-gradient(to left, $color-primary-light, $color-primary-dark);
         -webkit-background-clip: text;
         color: transparent;
         letter-spacing: .3rem;

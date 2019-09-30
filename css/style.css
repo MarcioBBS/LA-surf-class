@@ -79,11 +79,11 @@ body {
   text-transform: uppercase;
   letter-spacing: .2rem;
   transition: all .4s;
-  background-image: linear-gradient(to right, #2a7fda, #1a487a);
+  background-image: linear-gradient(to right, #4594e7, #133e6b);
   -webkit-background-clip: text;
   color: transparent; }
   .heading-secondary:hover {
-    background-image: linear-gradient(to left, #2a7fda, #1a487a);
+    background-image: linear-gradient(to left, #4594e7, #133e6b);
     -webkit-background-clip: text;
     color: transparent;
     letter-spacing: .3rem; }
@@ -214,6 +214,24 @@ body {
   .composition:hover .composition__photo:not(:hover) {
     transform: scale(1) translateY(-1rem); }
 
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.7);
+  font-size: 1.5rem;
+  padding: 3rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+  transition: all .5s;
+  margin-top: 9rem; }
+  .feature-box__icon {
+    font-size: 6rem;
+    display: inline-block;
+    background-image: linear-gradient(to right, #4594e7, #133e6b);
+    -webkit-background-clip: text;
+    color: transparent; }
+  .feature-box:hover {
+    transform: translateY(-2rem) scale(1.05); }
+
 .row {
   max-width: 114rem;
   margin: 0 auto; }
@@ -243,7 +261,7 @@ body {
 /* HERO HEADER */
 .header {
   height: 97vh;
-  background-image: linear-gradient(to right bottom, rgba(42, 127, 218, 0.8), rgba(26, 72, 122, 0.8)), url(../img/pier.jpg);
+  background-image: linear-gradient(to right bottom, rgba(69, 148, 231, 0.8), rgba(19, 62, 107, 0.8)), url(../img/pier.jpg);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -267,3 +285,11 @@ body {
   background-color: #eee;
   padding: 25rem 0;
   margin-top: -30vh; }
+
+.section-feature {
+  padding: 20rem 0;
+  background-image: linear-gradient(to right bottom, rgba(69, 148, 231, 0.8), rgba(19, 62, 107, 0.8)), url(../img/board-boots.jpg);
+  background-size: cover;
+  -webkit-clip-path: ellipse(100% 63% at 73% 65%);
+  clip-path: ellipse(100% 63% at 73% 65%);
+  margin-top: -18rem; }

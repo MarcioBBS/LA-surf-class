@@ -4,3 +4,24 @@
 
     margin-top: -30vh;
 }
+
+.section-feature {
+    padding: 20rem 0;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, .8),
+        rgba($color-primary-dark, .8)),
+        url(../img/board-boots.jpg);
+    background-size: cover;
+    
+    -webkit-clip-path: ellipse(100% 63% at 73% 65%);
+    clip-path: ellipse(100% 63% at 73% 65%);
+    margin-top: -18rem;
+    
+    //Getting the direct child
+   
+    // & > * {
+    //     transform: skew(7deg);
+    // }
+   
+}
