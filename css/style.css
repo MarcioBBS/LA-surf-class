@@ -261,7 +261,8 @@ body {
     z-index: 10;
     position: absolute;
     outline-offset: 2rem;
-    transition: all .3s; }
+    transition: all .3s;
+    border-radius: 5rem; }
     .composition__photo--p1 {
       top: -2rem;
       left: 0; }
@@ -275,16 +276,18 @@ body {
       outline: 1.5rem solid #2160a2;
       z-index: 20;
       transform: scale(1.05);
-      box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.15); }
+      box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.15);
+      border-radius: 5rem;
+      border: 2px solid #2160a2; }
   .composition:hover .composition__photo:not(:hover) {
     transform: scale(1) translateY(-1rem); }
 
 .feature-box {
   background-color: rgba(255, 255, 255, 0.7);
   font-size: 1.5rem;
-  padding: 3rem;
+  padding: 5rem;
   text-align: center;
-  border-radius: 3px;
+  border-radius: 65% 65% 50% 50%;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
   transition: all .5s;
   margin-top: 9rem; }

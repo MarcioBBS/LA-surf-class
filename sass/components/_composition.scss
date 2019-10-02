@@ -9,6 +9,7 @@
         position: absolute;
         outline-offset: 2rem;
         transition: all .3s;
+        border-radius: 5rem;
 
         &--p1 {
             top: -2rem;
@@ -30,6 +31,8 @@
             z-index: 20;
             transform: scale(1.05);
             box-shadow: 0 2.5rem 4rem $rgba-color-black-15;
+            border-radius: 5rem;
+            border: 2px solid $color-primary;
         }
     }
 

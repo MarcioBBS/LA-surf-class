@@ -6,7 +6,7 @@
     }
 }
 
-// BEGIN - For the button elements
+// BEGIN - For the button styles and animations
 @mixin btn-default($border-radius, $transform) {
     &, // To be applied in all <a> and <button> elements
     &:link,
@@ -88,4 +88,4 @@
         transform: translateY(0);
     }
 }
-// END - For the button elements
+// END - For the button styles and animations
