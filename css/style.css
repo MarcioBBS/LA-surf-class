@@ -252,6 +252,33 @@ body {
 .btn-board-text:hover {
   border-radius: 50% 65% 65% 50%; }
 
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 52rem; }
+  .card__side {
+    font-size: 2rem;
+    height: 52rem;
+    transition: all .8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+    .card__side--front {
+      background-color: #fff; }
+    .card__side--back {
+      transform: rotateY(180deg); }
+      .card__side--back-1 {
+        background-image: linear-gradient(to right bottom, #7ed56f, #145a43); }
+  .card:hover .card__side--front {
+    transform: rotateY(-180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0); }
+
 .composition {
   position: relative; }
   .composition__photo {
@@ -285,7 +312,7 @@ body {
 .feature-box {
   background-color: rgba(255, 255, 255, 0.7);
   font-size: 1.5rem;
-  padding: 5rem;
+  padding: 4.5rem;
   text-align: center;
   border-radius: 65% 65% 50% 50%;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
@@ -361,3 +388,10 @@ body {
   -webkit-clip-path: ellipse(100% 63% at 73% 65%);
   clip-path: ellipse(100% 63% at 73% 65%);
   margin-top: -18rem; }
+
+.section-services {
+  background-color: #eee;
+  padding: 16rem 0 5rem 0;
+  -webkit-clip-path: ellipse(100% 63% at 73% 65%);
+  clip-path: ellipse(100% 63% at 73% 65%);
+  margin-top: -9rem; }
