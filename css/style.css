@@ -152,6 +152,12 @@ body {
   .btn--white::after {
     background-color: #fff; }
 
+.btn--blue {
+  background-color: #2160a2;
+  color: #f7f7f7; }
+  .btn--blue::after {
+    background-color: #2160a2; }
+
 .btn::after {
   content: "";
   display: inline-block;
@@ -194,6 +200,12 @@ body {
   color: #333; }
   .btn-board--white::after {
     background-color: #fff; }
+
+.btn-board--blue {
+  background-color: #2160a2;
+  color: #f7f7f7; }
+  .btn-board--blue::after {
+    background-color: #2160a2; }
 
 .btn-board::after {
   content: "";
