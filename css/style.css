@@ -289,7 +289,7 @@ body {
     position: absolute;
     outline-offset: 2rem;
     transition: all .3s;
-    border-radius: 5rem; }
+    border-radius: 3px; }
     .composition__photo--p1 {
       top: -2rem;
       left: 0; }
@@ -304,8 +304,7 @@ body {
       z-index: 20;
       transform: scale(1.05);
       box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.15);
-      border-radius: 5rem;
-      border: 2px solid #2160a2; }
+      border-radius: 3px; }
   .composition:hover .composition__photo:not(:hover) {
     transform: scale(1) translateY(-1rem); }
 

@@ -9,7 +9,7 @@
         position: absolute;
         outline-offset: 2rem;
         transition: all .3s;
-        border-radius: 5rem;
+        border-radius: 3px;
 
         &--p1 {
             top: -2rem;
@@ -31,14 +31,12 @@
             z-index: 20;
             transform: scale(1.05);
             box-shadow: 0 2.5rem 4rem $rgba-color-black-15;
-            border-radius: 5rem;
-            border: 2px solid $color-primary;
+            border-radius: 3px;
         }
     }
 
     // It means that hover the elements that are not hovered by composition_photo.
     &:hover &__photo:not(:hover) {
         transform: scale(1) translateY(-1rem);
-        
     }
 }
