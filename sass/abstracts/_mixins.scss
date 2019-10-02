@@ -5,3 +5,87 @@
         display: table;
     }
 }
+
+// BEGIN - For the button styles and animations
+@mixin btn-default($border-radius, $transform) {
+    &, // To be applied in all <a> and <button> elements
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block;        
+        border-radius: $border-radius ;
+        transition: all .2s;
+        font-size: 1.3rem;
+        position: relative;
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1.5rem 2.5rem rgba($color-black, .2);
+
+        &::after {
+            transform: $transform;
+            opacity: 0;
+        }
+    }
+
+    &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 .7rem 1.5rem rgba($color-black, .2);
+    }
+
+    &--white {
+        background-color: $color-white;
+        color: $color-grey-dark-3;        
+
+        &::after {
+            background-color: $color-white;
+        }
+    }
+
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: $border-radius;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+    }
+
+    &--animated {
+        animation: moveInBottom .6s ease-in-out .75s;
+        animation-fill-mode: backwards;
+    }
+}
+
+@mixin btn-text-default($padding) {
+    &:link, 
+    &:visited {
+        font-size: $default-font-size;
+        color: $color-primary;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid $color-primary;
+        padding: $padding;
+        transition: all .2s;
+    }
+
+    &:hover {
+        background-color: $color-primary;
+        color: $color-grey-light-3;
+        transform: translateY(-2px);
+        box-shadow: 0 .5rem 2rem $rgba-color-black-3;
+    }
+
+    &:active {
+        box-shadow: 0 .5rem 1rem $rgba-color-black-2;
+        transform: translateY(0);
+    }
+}
+// END - For the button styles and animations

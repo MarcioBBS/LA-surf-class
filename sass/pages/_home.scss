@@ -4,3 +4,26 @@
 
     margin-top: -30vh;
 }
+
+.section-feature {
+    padding: 15rem 0;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, .8),
+        rgba($color-primary-dark, .8)),
+        url(../img/board-boots.jpg);
+    background-size: cover;
+    
+    -webkit-clip-path: ellipse(100% 63% at 73% 65%);
+    clip-path: ellipse(100% 63% at 73% 65%);
+    margin-top: -18rem;
+}
+
+.section-services {
+    background-color: $color-grey-light-2;
+    padding: 16rem 0 5rem 0;
+
+    -webkit-clip-path: ellipse(100% 63% at 73% 65%);
+    clip-path: ellipse(100% 63% at 73% 65%);
+    margin-top: -9rem;
+}
