@@ -4,12 +4,11 @@
     &__photo {        
         width: 55%;
         box-shadow: 0 1.5rem 4rem $rgba-color-black-2;
-        border-radius: 2px;
         z-index: 10;
         position: absolute;
-        outline-offset: 2rem;
+        outline-offset: 1.5rem;
         transition: all .3s;
-        border-radius: 3px;
+        border-radius: 50%;
 
         &--p1 {
             top: -2rem;
@@ -27,11 +26,12 @@
         }
 
         &:hover {
-            outline: 1.5rem solid $color-primary; // this is similar to the property "border". For space between an outline and the edge or border of an element use "outline-offset".
+            outline: 1rem solid $color-primary; // this is similar to the property "border". For space between an outline and the edge or border of an element use "outline-offset".
             z-index: 20;
             transform: scale(1.05);
             box-shadow: 0 2.5rem 4rem $rgba-color-black-15;
-            border-radius: 3px;
+            border-radius: 2px;
+            border: 2px solid $color-primary;
         }
     }
 

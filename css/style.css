@@ -362,12 +362,11 @@ body {
   .composition__photo {
     width: 55%;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
-    border-radius: 2px;
     z-index: 10;
     position: absolute;
-    outline-offset: 2rem;
+    outline-offset: 1.5rem;
     transition: all .3s;
-    border-radius: 3px; }
+    border-radius: 50%; }
     .composition__photo--p1 {
       top: -2rem;
       left: 0; }
@@ -378,11 +377,12 @@ body {
       top: 10rem;
       left: 20%; }
     .composition__photo:hover {
-      outline: 1.5rem solid #2160a2;
+      outline: 1rem solid #2160a2;
       z-index: 20;
       transform: scale(1.05);
       box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.15);
-      border-radius: 3px; }
+      border-radius: 2px;
+      border: 2px solid #2160a2; }
   .composition:hover .composition__photo:not(:hover) {
     transform: scale(1) translateY(-1rem); }
 
@@ -403,6 +403,36 @@ body {
     color: transparent; }
   .feature-box:hover {
     transform: translateY(-2rem) scale(1.05); }
+
+.review {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  background-color: #fff;
+  padding: 8rem;
+  padding-left: 9rem;
+  font-size: 1.6rem;
+  border-radius: 100% 0% 100% 0% / 25% 73% 27% 75%;
+  transform: skewX(-12deg); }
+  .review::after {
+    content: "";
+    clear: both;
+    display: table; }
+  .review__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    background-color: darkslategrey;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem) skewX(12deg); }
+  .review__img {
+    height: 100%; }
+  .review__text {
+    transform: skewX(12deg); }
 
 .row {
   max-width: 114rem;
@@ -468,4 +498,12 @@ body {
 
 .section-services {
   background-color: #eee;
-  padding: 10rem 0 5rem 0; }
+  padding: 10rem 0;
+  padding-bottom: 15rem; }
+
+.section-review {
+  padding: 10rem 0;
+  background-color: #d6d6d6;
+  -webkit-clip-path: ellipse(100% 60% at 50% 60%);
+  clip-path: ellipse(100% 60% at 50% 60%);
+  margin-top: -6rem; }

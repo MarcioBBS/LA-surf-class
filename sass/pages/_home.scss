@@ -21,5 +21,14 @@
 
 .section-services {
     background-color: $color-grey-light-2;
-    padding: 10rem 0 5rem 0;
+    padding: 10rem 0;
+    padding-bottom: 15rem;
+}
+
+.section-review {
+    padding: 10rem 0;
+    background-color: $color-grey-light-3;
+    -webkit-clip-path: ellipse(100% 60% at 50% 60%);
+    clip-path: ellipse(100% 60% at 50% 60%);
+    margin-top: -6rem;
 }
