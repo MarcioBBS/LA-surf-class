@@ -25,14 +25,39 @@
         clip-path: circle(50% at 50% 50%);
 
         transform: translateX(-3rem) skewX(12deg);
-        
+        position: relative;
     }
 
     &__img {
         height: 100%; // 100% from its parent element
+        transform: translate(-4rem) scale(1.4); 
+        transition: all .5s;
+        backface-visibility: hidden;
     }
 
     &__text {
         transform: skewX(12deg);
+    }
+
+    &__caption {
+        @include absolute-center;
+        transform: translate(-50%, 28%);
+        color: $color-white;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        text-align: center;
+        opacity: 0;
+        transition: all .5s;
+        backface-visibility: hidden;
+    }
+
+    &:hover &__caption {
+        opacity: 1;
+        transform: translate(-50%, -60%);
+    }
+
+    &:hover &__img {        
+        transform: translate(-4rem) scale(1);
+        filter: blur(2px) brightness(75%);
     }
 }
