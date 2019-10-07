@@ -22,13 +22,13 @@
 .section-services {
     background-color: $color-grey-light-2;
     padding: 10rem 0;
-    padding-bottom: 19rem;
+    //padding-bottom: 19rem;
 }
 
 .section-review {
-    padding: 10rem 15rem 0 0;
-    -webkit-clip-path: ellipse(100% 60% at 50% 60%);
-    clip-path: ellipse(100% 60% at 50% 60%);
+    padding: 15rem 0;
+    // -webkit-clip-path: ellipse(100% 60% at 50% 60%);
+    // clip-path: ellipse(100% 60% at 50% 60%);
     margin-top: -10rem;
     position: relative;
 }

@@ -539,12 +539,9 @@ body {
 
 .section-services {
   background-color: #eee;
-  padding: 10rem 0;
-  padding-bottom: 19rem; }
+  padding: 10rem 0; }
 
 .section-review {
-  padding: 10rem 15rem 0 0;
-  -webkit-clip-path: ellipse(100% 60% at 50% 60%);
-  clip-path: ellipse(100% 60% at 50% 60%);
+  padding: 15rem 0;
   margin-top: -10rem;
   position: relative; }
