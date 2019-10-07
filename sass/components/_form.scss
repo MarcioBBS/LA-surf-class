@@ -14,9 +14,38 @@
         font-family: inherit;
         font-size: 1.6rem;
         background-color: rgba($color-white, .5);
+        border-bottom: 3px solid $color-primary;
+        width: 84%;
+        display: block;
+        transition: all .3s;
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 1.5rem 2.5rem rgba($color-black, .1);
+            border-bottom: 3px solid $color-primary;
+
+            &:invalid {
+                border-bottom: 3px solid $color-tertiary-dark2;
+            }
+        }
+
+        &::-webkit-input-placeholder {
+            color:$color-grey-dark-2;
+        }
     }
 
     &__label {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-left: 2.3rem;
+        margin-top: .7rem;
+        display: block;
+        transition: all .3s;
+    }
 
+    &__input:placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
     }
 }
