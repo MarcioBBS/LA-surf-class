@@ -6,6 +6,12 @@
     }
 }
 
+@mixin absolute-plain {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 @mixin absolute-center {
     position: absolute;
     top: 50%;

@@ -133,6 +133,15 @@ body {
 .u-margin-top-huge {
   margin-top: 10rem !important; }
 
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: .5; }
+
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -417,7 +426,7 @@ body {
   margin: 0 auto;
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
   border-radius: 3px;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.6);
   padding: 8rem;
   padding-left: 9rem;
   font-size: 1.6rem;
@@ -535,7 +544,7 @@ body {
 
 .section-review {
   padding: 10rem 15rem 0 0;
-  background-color: #d6d6d6;
   -webkit-clip-path: ellipse(100% 60% at 50% 60%);
   clip-path: ellipse(100% 60% at 50% 60%);
-  margin-top: -10rem; }
+  margin-top: -10rem;
+  position: relative; }
