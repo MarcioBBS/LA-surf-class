@@ -4,4 +4,13 @@
     width: 100%;
     z-index: -1;
     opacity: .5;
+    overflow: hidden;
+
+    &__content {
+        width: inherit;
+        height: inherit;
+
+        object-fit: cover;
+        -o-object-fit: cover;
+    }
 }

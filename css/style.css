@@ -140,7 +140,13 @@ body {
   height: 100%;
   width: 100%;
   z-index: -1;
-  opacity: .5; }
+  opacity: .5;
+  overflow: hidden; }
+  .bg-video__content {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    -o-object-fit: cover; }
 
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -421,12 +427,23 @@ body {
   .feature-box:hover {
     transform: translateY(-2rem) scale(1.05); }
 
+.form__group:not(:last-child) {
+  margin-bottom: 2rem; }
+
+.form__input {
+  padding: 1.6rem 2.3rem;
+  border: none;
+  border-radius: 3px;
+  font-family: inherit;
+  font-size: 1.6rem;
+  background-color: rgba(255, 255, 255, 0.5); }
+
 .review {
   width: 75%;
   margin: 0 auto;
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
   border-radius: 3px;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.7);
   padding: 8rem;
   padding-left: 9rem;
   font-size: 1.6rem;
@@ -543,5 +560,24 @@ body {
 
 .section-review {
   padding: 15rem 0;
-  margin-top: -10rem;
   position: relative; }
+
+.section-book {
+  padding: 15rem 0;
+  background-image: linear-gradient(to right bottom, #4594e7, #133e6b);
+  -webkit-clip-path: ellipse(100% 60% at 50% 60%);
+  clip-path: ellipse(100% 60% at 50% 60%);
+  margin-top: -9rem; }
+
+.book {
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 50%, transparent 50%), url(../img/surfing.jpg);
+  background-size: cover;
+  background-position-y: -5rem;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  -webkit-clip-path: ellipse(100% 60% at 50% 60%);
+  clip-path: ellipse(100% 60% at 50% 60%);
+  height: 50rem; }
+  .book__form {
+    width: 50%;
+    padding: 6rem; }
