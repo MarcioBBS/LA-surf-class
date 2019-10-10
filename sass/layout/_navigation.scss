@@ -4,6 +4,7 @@
         display: none;
     }
 
+     //This is for the white circle button on top.
     &__button {
         background-color: $color-white;
         height: 7rem;
@@ -12,9 +13,12 @@
         top: 6rem;
         right: 6rem;
         border-radius: 50%;
-        z-index: 2000;       
+        z-index: 2000;
+        cursor: pointer;
+        box-shadow: 0 1rem 3rem $rgba-color-black-15;
     }
 
+    //This is for the green circle behind de white circle.
     &__background {
         height: 6rem;
         width: 6rem;
@@ -24,22 +28,30 @@
         right: 6.5rem;
         background-image: radial-gradient($color-primary-light, $color-primary-dark);
         z-index: 1000;
-        transform: scale(50);
+        
+        //For more cubic-bezier Easing functions go to: https://easings.net/
+        transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
     }
 
     &__nav {
         height: 100vh;
-        width: 100%;
         position: fixed;
         top: 0;
-        right: 0;
+        left: 0;
         z-index: 1500;
+
+        //  Navigation initial state.
+        opacity: 0;
+        width: 0;         
+
+        transition: all .8s cubic-bezier(0.6, -0.55, 0.265, 1.55);
     }
 
     &__list {
         @include absolute-center;
         list-style: none;
         text-align: center;
+        width: 100%;        
     }
 
     &__item {
@@ -49,7 +61,7 @@
     &__link {
         &:link,
         &:visited {
-            display: block;
+            display: inline-block;
             font-size: 3rem;
             font-weight: 300;
             padding: 1rem 2rem;            
@@ -57,17 +69,31 @@
             text-transform: uppercase;
             text-decoration: none;
             background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
-            background-size: 220%;
-            transition: all .4s;
             border-radius: .3rem;
+            
+            //Shifting the background-image to the right side. Shifting enough to push the $color-white to the right (Until we can NOT see it)
+            background-size: 226%;
+            transition: all .4s;
+            
         }
 
         &:hover,
         &:active {
-            background-position: 100%;
+            background-position: 100%; //The background-position CSS property sets the initial position for each background image.
             color: $color-primary;
             transform: translateX(1rem);
         }
         
+    }
+
+    // When the checkbox is checked then scale the background
+    &__checkbox:checked ~ &__background {
+        transform: scale(80);
+    }
+
+    // When the checkbox is checked then show the navigation.
+    &__checkbox:checked ~ &__nav {
+        width: 100%;
+        opacity: 1;
     }
 }
