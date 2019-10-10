@@ -1,5 +1,6 @@
 .navigation {
 
+    // Checkbox HACK    
     &__checkbox {
         display: none;
     }
@@ -16,6 +17,7 @@
         z-index: 2000;
         cursor: pointer;
         box-shadow: 0 1rem 3rem $rgba-color-black-15;
+        text-align: center; // This is used to center the 3 lines / Menu hamburguer
     }
 
     //This is for the green circle behind de white circle.
@@ -85,15 +87,64 @@
         }
         
     }
-
-    // When the checkbox is checked then scale the background
+  
+    // (Checkbox HACK) - When the checkbox is checked then scale the background
     &__checkbox:checked ~ &__background {
         transform: scale(80);
     }
 
-    // When the checkbox is checked then show the navigation.
+    // (Checkbox HACK) - When the checkbox is checked then show the navigation.
     &__checkbox:checked ~ &__nav {
         width: 100%;
         opacity: 1;
     }
+
+    // ICON Hamburguer
+    &__icon-hamburger {
+        position: relative;
+        top: 3.4rem;
+
+        &,
+        &::before,
+        &::after {
+            width: 3rem;
+            height: 2px;
+            background-color: $color-grey-dark-3;
+            display: inline-block;
+            border-radius: 1rem;            
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: all .2s;
+        }
+        
+        &::before {top: -.8rem;}
+        &::after {top: .8rem;}
+    }
+
+    // when hover the button then push the top line to the top
+    &__button:hover &__icon-hamburger::before { top: -1rem; }
+
+    // when hover the button then push the bottom line to the bottom
+    &__button:hover &__icon-hamburger::after { top: 1rem; }
+
+    // (Checkbox HACK)
+    &__checkbox:checked + &__button &__icon-hamburger {        
+        background-color: transparent; // It only makes the middle line transparent
+    }
+
+    &__checkbox:checked + &__button &__icon-hamburger::before { 
+        top: 0;       
+        transform: rotate(225deg);
+    }
+
+    &__checkbox:checked + &__button &__icon-hamburger::after {        
+        top: 0;
+        transform: rotate(-225deg);
+    }
+
 }
