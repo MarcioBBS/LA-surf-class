@@ -83,7 +83,7 @@ body {
 .heading-secondary {
   display: inline-block;
   font-size: 3.5rem;
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: .2rem;
   transition: all .4s;
@@ -132,6 +132,12 @@ body {
 
 .u-margin-top-huge {
   margin-top: 10rem !important; }
+
+.u-margin-left-small {
+  margin-left: 1.5rem !important; }
+
+.u-margin-left-medium {
+  margin-left: 4rem !important; }
 
 .bg-video {
   position: absolute;
@@ -514,6 +520,74 @@ body {
 
 .form__radio-input:checked + .form__radio-label .form__radio-button::after {
   opacity: 1; }
+
+.pop-up {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .5s; }
+  .pop-up__content {
+    width: 78%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    display: table;
+    overflow: hidden;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.25);
+    transition: all .5s .3s; }
+  .pop-up__left {
+    display: table-cell;
+    width: 33.333%; }
+  .pop-up__right {
+    display: table-cell;
+    width: 66.667%;
+    padding: 3rem 5rem;
+    vertical-align: middle; }
+  .pop-up__img {
+    display: block;
+    width: 100%; }
+  .pop-up__text {
+    font-size: 1.4rem;
+    column-count: 2;
+    column-gap: 5em;
+    column-rule: 1px solid #d6d6d6;
+    -moz-column-count: 2;
+    -moz-column-gap: 6em;
+    -moz-column-rule: 1px solid #d6d6d6;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto; }
+  .pop-up:target {
+    opacity: 1;
+    visibility: visible; }
+  .pop-up:target .pop-up__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); }
+  .pop-up__close:link, .pop-up__close:visited {
+    display: inline-block;
+    position: absolute;
+    top: 1.5rem;
+    right: 2.5rem;
+    line-height: 1;
+    color: #333;
+    text-decoration: none;
+    font-size: 3.5rem;
+    transition: all .5s; }
+  .pop-up__close:hover {
+    color: #2160a2;
+    transform: scale(1.5) rotate(360deg); }
 
 .review {
   width: 75%;

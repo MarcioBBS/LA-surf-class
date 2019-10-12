@@ -6,8 +6,8 @@
     }
 }
 
-@mixin absolute-plain {
-    position: absolute;
+@mixin absolute-plain($position) {
+    position: $position;
     top: 0;
     left: 0;
 }
