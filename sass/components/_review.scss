@@ -12,6 +12,13 @@
     border-radius: 100% 0% 100% 0% / 25% 73% 27% 75% ;
     transform: skewX(-12deg);
 
+    @include respond(tab-port) {
+        border-radius: 100% 0% 100% 0% / 10% 90% 10% 90% ;
+        width: 100%;        
+        padding: 7rem;
+        padding-left: 7rem;
+    }
+
     &__shape {
         width: 15rem;
         height: 15rem;
