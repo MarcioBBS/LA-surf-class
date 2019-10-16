@@ -8,6 +8,11 @@
     transition: all .5s;
     margin-top: 5rem;
 
+    @include respond(tab-port) {
+        border-radius: 141% 50% 50% 50% / 100% 100% 0% 0%;
+        padding: 2.5rem;
+    }
+
     &__icon {
         font-size: 6rem;       
         display: inline-block;

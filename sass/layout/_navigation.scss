@@ -18,6 +18,16 @@
         cursor: pointer;
         box-shadow: 0 1rem 3rem $rgba-color-black-15;
         text-align: center; // This is used to center the 3 lines / Menu hamburguer
+
+        @include respond(tab-port) {
+            top: 4rem;
+            right: 4rem;
+        }
+
+        @include respond(phone) {
+            top: 3rem;
+            right: 3rem;
+        }
     }
 
     //This is for the green circle behind de white circle.
@@ -33,6 +43,16 @@
         
         //For more cubic-bezier Easing functions go to: https://easings.net/
         transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+
+        @include respond(tab-port) {
+            top: 4.5rem;
+            right: 4.5rem;
+        }
+
+        @include respond(phone) {
+            top: 3.5rem;
+            right: 3.5rem;
+        }
     }
 
     &__nav {
