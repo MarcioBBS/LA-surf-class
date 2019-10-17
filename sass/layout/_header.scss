@@ -13,6 +13,10 @@
         -webkit-clip-path: ellipse(100% 70% at 17% 30%);
         clip-path: ellipse(100% 70% at 17% 30%);
 
+        @include respond(tab-port) {
+            height: 72vh;
+        }
+
         @include respond(phone) {
             -webkit-clip-path: ellipse(100% 70% at 30% 30%);
             clip-path: ellipse(100% 70% at 30% 30%);

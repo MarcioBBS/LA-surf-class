@@ -8,6 +8,10 @@
     transition: all .5s;
     margin-top: 5rem;
 
+    @include respond(tab-med) {
+        padding:  3rem;    
+    }
+
     @include respond(tab-port) {
         border-radius: 141% 50% 50% 50% / 100% 32% 0% 0%;
         padding: 2.5rem;

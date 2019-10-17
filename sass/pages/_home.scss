@@ -6,6 +6,7 @@
 
     @include respond(tab-port) {
         padding: 20rem 0 27rem 0;
+        margin-top: -22vh;
     }
 }
 
@@ -22,6 +23,10 @@
     clip-path: ellipse(100% 63% at 73% 65%);
     margin-top: -18rem;
 
+    @include respond(tab-med) {
+        padding: 12rem 2rem;    
+    }
+    
     @include respond(tab-port) {
         padding: 10rem 0;
         -webkit-clip-path: ellipse(136% 63% at 64% 66%);
