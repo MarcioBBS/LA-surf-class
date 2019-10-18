@@ -38,7 +38,13 @@
 
         <header class="header">
             <div class="header__logo-box">
-                <img src="img/logo-white2.png" alt="Logo" class="header__logo">
+                <picture>
+                    <source srcset="img/logo-white-small-2x.png" media="(max-width: 37.5em)"> <!-- 37.5em = 600px -->
+                    <img src="img/logo-white-2x.png" alt="Logo" class="header__logo">
+                </picture>
+
+
+                
             </div>
             <div class="header__text-box u-margin-top-big">
                 <h1 class="heading-primary">
@@ -72,9 +78,23 @@
                     </div>
                     <div class="col-1-of-2">
                         <div class="composition">
-                            <img src="img/surf-1-large.jpg" alt="photo1" class="composition__photo composition__photo--p1">
-                            <img src="img/surf-2-large.jpg" alt="photo2" class="composition__photo composition__photo--p2">
-                            <img src="img/surf-3-large.jpg" alt="photo3" class="composition__photo composition__photo--p3">
+                            <img srcset="img/surf-1.jpg 300w, img/surf-1-large.jpg 1000w"
+                                 sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px" 
+                                 alt="photo1" 
+                                 class="composition__photo composition__photo--p1" 
+                                 src="img/surf-1-large.jpg">
+
+                            <img srcset="img/surf-2.jpg 300w, img/surf-2-large.jpg 1000w"
+                                 sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px" 
+                                 alt="photo2" 
+                                 class="composition__photo composition__photo--p2" 
+                                 src="img/surf-2-large.jpg">
+
+                            <img srcset="img/surf-3.jpg 300w, img/surf-3-large.jpg 1000w"
+                                 sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px" 
+                                 alt="photo3" 
+                                 class="composition__photo composition__photo--p3" 
+                                 src="img/surf-3-large.jpg">
                         </div>
                     </div>
                 </div>
@@ -330,9 +350,14 @@
 
         </main>
         <footer class="footer">
+
             <div class="footer__logo-box">
-                <img src="img/logo-blue2x.png" alt="Logo LA Surf Class" class="footer__logo">
+                <picture class="footer__logo">
+                    <source srcset="img/logo-blue-small-1x.png 1x, img/logo-blue-small-2x.png 2x" media="(max-width: 37.5em)">
+                    <img srcset="img/logo-blue-1x.png 1x, img/logo-blue-2x.png 2x" alt="Logo LA Surf Class" src="img/logo-blue-2x.png">
+                </picture>            
             </div>
+            
             <div class="row">
                     <div class="col-1-of-2">
                         <div class="footer__navigation">
@@ -345,6 +370,7 @@
                             </ul>
                         </div>
                     </div>
+
                     <div class="col-1-of-2">
                         <p class="footer__copyright">
                             Built my <a href="#" class="footer__link">Marcio Braz</a>. Copyright &copy; by Marcio Braz. You are 100% allowed to use this webpage for both personal and commercial use, but NOT to claim it as your own design. A credit to the original author, Marcio Braz, is of course highly appreciated!
