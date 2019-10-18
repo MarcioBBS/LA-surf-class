@@ -16,8 +16,18 @@
         to right bottom,
         rgba($color-primary-light, .8),
         rgba($color-primary-dark, .8)),
-        url(../img/board-boots.jpg);
+        url(../img/board-boots-small.jpg);
     background-size: cover;
+
+    //Apply this style if the (min-resolution: 192dpi and min-width: 37.5em) OR if the min-width: 2000px
+    // 125em = 2000px
+    @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+        background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, .8),
+        rgba($color-primary-dark, .8)),
+        url(../img/board-boots.jpg);        
+    }
     
     -webkit-clip-path: ellipse(100% 63% at 73% 65%);
     clip-path: ellipse(100% 63% at 73% 65%);
@@ -81,7 +91,7 @@
         background-image: linear-gradient(to right,
                                       rgba($color-white, .7) 0%,
                                       rgba($color-white, .7) 100%,) ,
-                      url(../img/surfing.jpg);
+                      url(../img/surfing-small.jpg);
         
     }
 

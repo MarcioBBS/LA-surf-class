@@ -59,17 +59,33 @@
 
         &--1 {
             background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
-            url(../img/card1.jpg);
+                              url(../img/card1.jpg);
+
+            @include respond(tab-port) {
+                background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
+                                  url(../img/card1-small.jpg); 
+            }
         }
 
         &--2 {
             background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark),
-            url(../img/card2.jpg);
+                              url(../img/card2.jpg);
+            
+            @include respond(tab-port) {
+            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark),
+                                url(../img/card2-small.jpg); 
+            }
+                              
         }
 
         &--3 {
             background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark),
-            url(../img/card3.jpg);
+                              url(../img/card3.jpg);
+            
+            @include respond(tab-port) {
+            background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark),
+                                url(../img/card3-small.jpg); 
+            }
         }
     }
 

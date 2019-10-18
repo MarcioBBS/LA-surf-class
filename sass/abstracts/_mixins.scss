@@ -142,7 +142,7 @@ RESPONSIVE CHANGING ORDER: Base + typography + general layout + grid > page layo
 @mixin respond($breakpoint) {
 
     @if $breakpoint == phone-small {
-        @media (max-width: 26em) {@content}; // 415px - 415/16 = 26
+        @media (max-width: 26em) {@content}; // 414px - 414/16 = 26
     }
 
     @if $breakpoint == phone {
