@@ -19,6 +19,10 @@
         padding-left: 7rem;
     }
 
+    @include respond(phone-small) {
+        transform: none;
+    }
+
     &__shape {
         width: 15rem;
         height: 15rem;
@@ -35,6 +39,12 @@
         position: relative;
 
         overflow: hidden;
+
+        @include respond(phone-small) {
+            transform: none;
+            float: none;
+            margin-bottom: 2rem;
+        }
     }
 
     &__img {
@@ -46,6 +56,10 @@
 
     &__text {
         transform: skewX(12deg);
+
+        @include respond(phone-small) {
+            transform: none;
+        }
     }
 
     &__caption {
