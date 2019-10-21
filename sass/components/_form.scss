@@ -1,5 +1,9 @@
 .form {
 
+    @include respond(phone-small) {
+        text-align: center;
+    }
+
     &__group {
         
         &:not(:last-child) {
@@ -69,6 +73,12 @@
         @include respond(tab-port) {
             width: 100%;
             margin-bottom: 2rem;
+        }
+
+        @include respond(phone-small) {
+            // width: 50%;
+            // margin-bottom: 2rem;
+            text-align: initial;
         }
     }
 

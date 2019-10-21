@@ -26,6 +26,12 @@
                 top: 4rem;
                 transform: scale(1.4);
             }
+
+            @include respond(phone-small) {
+                display: none;
+            }
+
+            
         }
 
         &--p2 {
@@ -37,6 +43,10 @@
                 transform: scale(1.5);
                 z-index: 100;
             }
+
+            @include respond(phone-small) {
+                display: none;
+            }
         }
 
         &--p3 {
@@ -47,6 +57,10 @@
                 top: 1rem;
                 left: 1rem;
                 transform: scale(1.3);
+            }
+
+            @include respond(phone-small) {
+                display: none;
             }
         }
 

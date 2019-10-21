@@ -75,7 +75,6 @@
             background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark),
                                 url(../img/card2-small.jpg); 
             }
-                              
         }
 
         &--3 {
@@ -186,7 +185,11 @@
                 // border-radius: 0 0 0 14rem;
                 border-radius: 100% 0% 100% 0% / 26% 100% 0% 74%; 
             }
-        } 
+        }
+
+        &__picture {
+            height: 30rem;
+        }
 
         &:hover &__side--front {
             transform: rotateY(0);
