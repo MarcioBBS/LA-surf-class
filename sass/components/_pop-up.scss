@@ -8,6 +8,17 @@
     visibility: hidden;
     transition: all .5s;
 
+
+    // Graceful Degradation
+    @supports ( (backdrop-filter: blur(1rem)) or (-webkit-backdrop-filter: blur(1rem)) ) {
+    
+        // Blur the background on the back of the pop-up window.
+        backdrop-filter: blur(1rem);
+        -webkit-backdrop-filter: blur(1rem);
+        background-color: rgba($color-black, .4);
+    }
+    
+
     &__content {
         width: 78%;
         @include absolute-center;

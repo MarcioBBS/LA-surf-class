@@ -46,6 +46,7 @@ body {
     text-transform: uppercase;
     letter-spacing: .2rem;
     transition: all .4s;
+    color: $color-primary;
 
     @include respond(tab-port) {
         font-size: 3rem;
@@ -56,17 +57,27 @@ body {
         font-size: 2.5rem;
         
     }
-    
-    //for linear-gradient effect
-    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
-    -webkit-background-clip: text;
-    color: transparent;
+
+    @supports ((-webkit-background-clip: text) or (background-clip: text)) {
+        //for linear-gradient effect
+        background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;    
+    }
 
     &:hover {
-        background-image: linear-gradient(to left, $color-primary-light, $color-primary-dark);
-        -webkit-background-clip: text;
-        color: transparent;
         letter-spacing: .3rem;
+        color: $color-primary-dark;
+
+        @supports ((-webkit-background-clip: text) or (background-clip: text)) {
+            background-image: linear-gradient(to left, $color-primary-light, $color-primary-dark);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
     }
     
 }

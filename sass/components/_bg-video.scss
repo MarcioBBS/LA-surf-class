@@ -6,11 +6,12 @@
     opacity: .5;
     overflow: hidden;
 
-    &__content {
-        width: inherit;
+    &__content {        
         height: inherit;
 
-        object-fit: cover;
-        -o-object-fit: cover;
+        @supports ((-o-object-fit: cover) or (object-fit: cover)) {            
+            object-fit: cover;
+            -o-object-fit: cover;
+        }        
     }
 }

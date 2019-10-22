@@ -5,6 +5,7 @@
     -moz-perspective: 150rem;
     position: relative;
     height: 50rem; //card height
+    transform-style: preserve-3d;
 
     &__side {
         height: 50rem; //card height
@@ -13,7 +14,8 @@
         top: 0;
         left: 0;
         width: 100%;
-        backface-visibility: hidden; //  hide the back side of the element
+        -webkit-backface-visibility: hidden; //  hide the back side of the element
+        backface-visibility: hidden;
         border-radius: .5rem;
         overflow: hidden; //used to corrent the border-radius in the background-image.
         box-shadow: 0 1.5rem 4rem $rgba-color-black-15;
@@ -58,8 +60,9 @@
         border-radius: .5rem;
 
         &--1 {
-            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
-                              url(../img/card1.jpg);
+            background-image: linear-gradient(to right bottom, rgba($color-secondary-light, .8), rgba($color-secondary-dark, .8)),
+            url(../img/card1.jpg);
+
 
             @include respond(tab-port) {
                 background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
@@ -68,22 +71,22 @@
         }
 
         &--2 {
-            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark),
-                              url(../img/card2.jpg);
+            background-image: linear-gradient(to right bottom, rgba($color-primary-light, .8), rgba($color-primary-dark, .8)),
+            url(../img/card2.jpg);
             
             @include respond(tab-port) {
             background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark),
-                                url(../img/card2-small.jpg); 
+                              url(../img/card2-small.jpg); 
             }
         }
 
         &--3 {
-            background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark),
-                              url(../img/card3.jpg);
+            background-image: linear-gradient(to right bottom, rgba($color-tertiary-light, .8), rgba($color-tertiary-dark, .8)),
+            url(../img/card3.jpg);
             
             @include respond(tab-port) {
             background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark),
-                                url(../img/card3-small.jpg); 
+                              url(../img/card3-small.jpg); 
             }
         }
     }
@@ -182,7 +185,6 @@
 
             &--back {
                 transform: rotateY(0);
-                // border-radius: 0 0 0 14rem;
                 border-radius: 100% 0% 100% 0% / 26% 100% 0% 74%; 
             }
         }
