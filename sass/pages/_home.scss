@@ -2,7 +2,17 @@
     background-color: $color-grey-light-2;
     padding: 25rem 0;
 
-    margin-top: -30vh;
+    margin-top: -25vh;
+
+    @include respond(tab-land) {
+        padding: 30rem 0;
+        margin-top: -23vh;
+    }
+
+    @include respond(tab-port) {
+        padding: 20rem 0 27rem 0;
+        margin-top: -18vh;
+    }
 }
 
 .section-feature {
@@ -11,15 +21,111 @@
         to right bottom,
         rgba($color-primary-light, .8),
         rgba($color-primary-dark, .8)),
-        url(../img/board-boots.jpg);
+        url(../img/board-boots-small.jpg);
     background-size: cover;
+
+    //Apply this style if the (min-resolution: 192dpi and min-width: 37.5em) OR if the min-width: 2000px
+    // 125em = 2000px
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+        background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, .8),
+        rgba($color-primary-dark, .8)),
+        url(../img/board-boots.jpg);        
+    }
     
     -webkit-clip-path: ellipse(100% 63% at 73% 65%);
     clip-path: ellipse(100% 63% at 73% 65%);
     margin-top: -18rem;
+
+    @include respond(tab-med) {
+        padding: 12rem 2rem;    
+    }
+    
+    @include respond(tab-port) {
+        padding: 10rem 0;
+        -webkit-clip-path: ellipse(136% 63% at 64% 66%);
+        clip-path: ellipse(136% 63% at 64% 66%);
+        margin-top: -19rem;
+    }
+
+    @include respond(phone-small) {
+        margin-top: -32rem;
+    }
 }
 
 .section-services {
     background-color: $color-grey-light-2;
-    padding: 10rem 0 5rem 0;
+    padding: 10rem 0;
+
+    @include respond(tab-port) {
+        padding: 5rem;
+    }
+
+    @include respond(phone-small) {
+        padding: 5rem 0;
+    }
+}
+
+.section-review {
+    padding: 15rem 0;   
+    position: relative;
+    
+    @include respond(tab-port) {
+        padding: 10rem 0;
+    }
+}
+
+.section-book {
+    padding: 15rem 0;
+    background-image: linear-gradient(to right bottom, $color-primary-light,$color-primary-dark);
+    -webkit-clip-path: ellipse(100% 60% at 50% 60%);
+    clip-path: ellipse(100% 60% at 50% 60%);
+    margin-top: -9rem;
+
+    @include respond(phone-small) {
+        padding: 5rem 0;
+    }
+}
+
+.book {
+    background-image: linear-gradient(90deg,
+                                      rgba($color-white, .7) 0%,
+                                      rgba($color-white, .7) 50%,
+                                      transparent 50%) ,
+                      url(../img/surfing.jpg);
+    background-size: cover;
+    background-position-y: -5rem;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem $rgba-color-black-15;
+
+    -webkit-clip-path: ellipse(100% 60% at 50% 60%);
+    clip-path: ellipse(100% 60% at 50% 60%);
+
+    @include respond(tab-port) {
+        width: 100%;
+
+        background-image: linear-gradient(to right,
+                                      rgba($color-white, .7) 0%,
+                                      rgba($color-white, .7) 100%,) ,
+                      url(../img/surfing-small.jpg);   
+    }
+
+    @include respond(phone-small) {
+        background-position-y: 0rem;
+        background-position-x: -9rem;
+    }
+
+    &__form {
+        width: 50%;
+        padding: 6rem;
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
+
+        @include respond(phone-small) {
+            padding: 3rem;
+        }
+    }
 }

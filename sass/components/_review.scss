@@ -1,0 +1,89 @@
+.review {
+    width: 75%;
+    margin: 0 auto;
+    box-shadow: 0 3rem 6rem rgba($color-black, .1);
+    border-radius: 3px;
+    background-color: rgba($color-white, .7);
+    padding: 8rem;
+    padding-left: 9rem;
+    font-size: $default-font-size;
+    @include clearfix;
+
+    border-radius: 100% 0% 100% 0% / 25% 73% 27% 75% ;
+    transform: skewX(-12deg);
+
+    @include respond(tab-port) {
+        border-radius: 100% 0% 100% 0% / 10% 90% 10% 90% ;
+        width: 100%;        
+        padding: 7rem;
+        padding-left: 7rem;
+    }
+
+    @include respond(phone-small) {
+        transform: none;
+    }
+
+    &__shape {
+        width: 15rem;
+        height: 15rem;
+        float: left;
+        background-color: darkslategrey;
+        transform: translateX(-3rem) skewX(12deg);
+        position: relative;
+        border-radius: 50%;
+        overflow: hidden;
+
+        @supports ( (-webkit-clip-path: ellipse(0 0)) or (clip-path: ellipse(0 0)) ) {
+            -webkit-shape-outside: circle(50% at 50% 50%);
+            shape-outside: circle(50% at 50% 50%);
+    
+            -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%); 
+
+            border-radius: none;
+        }
+
+        @include respond(phone-small) {
+            transform: none;
+            float: none;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__img {
+        height: 100%; // 100% from its parent element
+        transform: translate(-4rem) scale(1.4); 
+        transition: all .5s;
+        backface-visibility: hidden;
+    }
+
+    &__text {
+        transform: skewX(12deg);
+
+        @include respond(phone-small) {
+            transform: none;
+        }
+    }
+
+    &__caption {
+        @include absolute-center;
+        transform: translate(-50%, 28%);
+        color: $color-white;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        text-align: center;
+        opacity: 0;
+        transition: all .5s;
+        backface-visibility: hidden;
+    }
+
+    &:hover &__caption {
+        opacity: 1;
+        transform: translate(-50%, -60%);
+    }
+
+    &:hover &__img {        
+        transform: translate(-4rem) scale(1);
+        filter: blur(2px) brightness(75%);
+    }
+}

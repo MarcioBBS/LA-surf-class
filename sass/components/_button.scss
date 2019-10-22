@@ -2,7 +2,7 @@
 .btn-board { @include btn-default(50% 65% 65% 50%, scale(2)); }
 
 .btn-text {
-    @include btn-text-default(3px)    
+    @include btn-text-default(3px);
 }
 
 .btn-board-text {

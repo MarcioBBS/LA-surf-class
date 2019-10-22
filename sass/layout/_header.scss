@@ -1,17 +1,46 @@
 /* HERO HEADER */
 .header {
-    height: 97vh;
+    height: 85vh;
     background-image: linear-gradient(
         to right bottom,
         rgba($color-primary-light, .8),
         rgba($color-primary-dark, .8)),
-        url(../img/pier.jpg);
+        url(../img/pier-small.jpg);
         background-size: cover;
         background-position: center;
         position: relative;
-      
-        -webkit-clip-path: ellipse(58% 48% at 49% 22%);
-        clip-path: ellipse(100% 70% at 17% 30%);
+
+        @supports ( (-webkit-clip-path: ellipse(0 0)) or (clip-path: ellipse(0 0)) ) {
+            height: 75vh;
+            -webkit-clip-path: ellipse(100% 70% at 17% 30%);
+            clip-path: ellipse(100% 70% at 17% 30%);
+        }
+
+        //Apply this style if the (min-resolution: 192dpi and min-width: 37.5em) OR if the min-width: 2000px
+        // 125em = 2000px
+        @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), 
+               only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 35.5em), // For Safari compatibility
+               only screen and (min-width: 125em) {
+            background-image: linear-gradient(
+            to right bottom,
+            rgba($color-primary-light, .8),
+            rgba($color-primary-dark, .8)),
+            url(../img/pier.jpg);
+        }
+
+        @include respond(tab-land) {
+            height: 60vh; 
+        }
+
+        // @include respond(tab-port) {
+        //     height: 72vh;
+        // }
+
+        @include respond(phone) {
+            height: 63vh;
+            -webkit-clip-path: ellipse(100% 70% at 30% 30%);
+            clip-path: ellipse(100% 70% at 30% 30%);
+        }
 
         &__logo-box {
             position: absolute;

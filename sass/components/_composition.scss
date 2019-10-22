@@ -1,42 +1,86 @@
 .composition {
     position: relative;
     
-    &__photo {        
+    &__photo { 
         width: 55%;
         box-shadow: 0 1.5rem 4rem $rgba-color-black-2;
-        border-radius: 2px;
         z-index: 10;
         position: absolute;
-        outline-offset: 2rem;
+        outline-offset: 1.5rem;
         transition: all .3s;
-        border-radius: 3px;
+        border-radius: 50%;
+
+        @include respond(tab-port) {
+            position: relative;
+            float: left;
+            width: 33.333%;
+            margin-top: 1.5rem;
+            outline-offset: 1rem;
+        }
 
         &--p1 {
             top: -2rem;
-            left: 0;
+            left: .5rem;
+
+            @include respond(tab-port) {
+                top: 4rem;
+                transform: scale(1.4);
+            }
+
+            @include respond(phone-small) {
+                display: none;
+            }
+
+            
         }
 
         &--p2 {
-            top: 2rem;
+            top: 3rem;
             right: 0;
+
+            @include respond(tab-port) {
+                top: -1.5rem;
+                transform: scale(1.5);
+                z-index: 100;
+            }
+
+            @include respond(phone-small) {
+                display: none;
+            }
         }
 
         &--p3 {
             top: 10rem;
             left: 20%;
+
+            @include respond(tab-port) {
+                top: 1rem;
+                left: 1rem;
+                transform: scale(1.3);
+            }
+
+            @include respond(phone-small) {
+                display: none;
+            }
         }
 
         &:hover {
-            outline: 1.5rem solid $color-primary; // this is similar to the property "border". For space between an outline and the edge or border of an element use "outline-offset".
+            outline: 1rem solid $color-primary; // this is similar to the property "border". For space between an outline and the edge or border of an element use "outline-offset".
             z-index: 20;
             transform: scale(1.05);
             box-shadow: 0 2.5rem 4rem $rgba-color-black-15;
-            border-radius: 3px;
+            border-radius: 2px;
+            border: 2px solid $color-primary;
+
+            @include respond(tab-port) { 
+                transform: scale(1.5);
+                outline: .5rem solid $color-primary;
+            }
         }
     }
 
     // It means that hover the elements that are not hovered by composition_photo.
     &:hover &__photo:not(:hover) {
-        transform: scale(1) translateY(-1rem);
+        transform: scale(1.2) translateY(-1rem);
     }
 }

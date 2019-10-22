@@ -1,0 +1,17 @@
+.bg-video {
+    @include absolute-plain(absolute);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: .5;
+    overflow: hidden;
+
+    &__content {        
+        height: inherit;
+
+        @supports ((-o-object-fit: cover) or (object-fit: cover)) {            
+            object-fit: cover;
+            -o-object-fit: cover;
+        }        
+    }
+}

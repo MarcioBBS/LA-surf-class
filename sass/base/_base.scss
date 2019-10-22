@@ -1,18 +1,47 @@
 *,
 *::after,
 *::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit; }
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit; }
 
 html {
-  /*
+    /*
     * 16px is the default value for most of the browsers.
-    * 62.5% of 16px is 10px which is equal to 1rem. 1rem is much easier to calculate throughout the website and more responsive robust 
+    * 62.5% of 16px is 10px (1rem = 10px; 10px/16px = 62.5%) which is equal to 1rem. 1rem is much easier to calculate throughout the website and more responsive robust.
     */
-  font-size: 62.5%; }
+    font-size: 62.5%; 
+
+// MEDIA QUERIES
+
+  // The order of the media queries matter. As this project was built first for desktop, then include the large media queries first. 
+    
+    @include respond(tab-land) { // Setting the font-size of 9px
+      font-size: 56.25%; // 1em = 9px (9/16 = 0.5625)
+    }
+
+    // The font-size of 50% also applies/includes for phone as the max-width is 900px/56.25em
+    @include respond(tab-port) { // Setting the font-size of 8px
+      font-size: 50%; // 1em = 8px (8/16 = 0.5)
+    }
+
+    // The order here doesn't affect the other media queries because it's using "min-width"
+    @include respond(big-desktop) { // Setting the font-size of 12px
+      font-size: 75%; //1rem = 12px (12/16 = 0.75)
+    }
+}
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box; 
+  padding: 1.5rem;
 
-/* HERO HEADER */
+  @include respond(tab-port) {
+    padding: 0;
+  }
+
+}
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}
