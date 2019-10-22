@@ -2,11 +2,16 @@
     background-color: $color-grey-light-2;
     padding: 25rem 0;
 
-    margin-top: -30vh;
+    margin-top: -25vh;
+
+    @include respond(tab-land) {
+        padding: 30rem 0;
+        margin-top: -23vh;
+    }
 
     @include respond(tab-port) {
         padding: 20rem 0 27rem 0;
-        margin-top: -22vh;
+        margin-top: -18vh;
     }
 }
 

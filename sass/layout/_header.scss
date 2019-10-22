@@ -11,7 +11,7 @@
         position: relative;
 
         @supports ( (-webkit-clip-path: ellipse(0 0)) or (clip-path: ellipse(0 0)) ) {
-            height: 97vh;
+            height: 75vh;
             -webkit-clip-path: ellipse(100% 70% at 17% 30%);
             clip-path: ellipse(100% 70% at 17% 30%);
         }
@@ -28,11 +28,16 @@
             url(../img/pier.jpg);
         }
 
-        @include respond(tab-port) {
-            height: 72vh;
+        @include respond(tab-land) {
+            height: 60vh; 
         }
 
+        // @include respond(tab-port) {
+        //     height: 72vh;
+        // }
+
         @include respond(phone) {
+            height: 63vh;
             -webkit-clip-path: ellipse(100% 70% at 30% 30%);
             clip-path: ellipse(100% 70% at 30% 30%);
         }

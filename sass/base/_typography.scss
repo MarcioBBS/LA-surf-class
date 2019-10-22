@@ -23,6 +23,11 @@ body {
             font-size: 5rem;
             letter-spacing: 1rem;
         }
+
+        @include respond(phone-small) {
+            font-size: 4rem;
+            letter-spacing: .5rem;
+        }
         
     }
 
@@ -34,7 +39,7 @@ body {
         animation: moveInRight 1s cubic-bezier(.07,.22,.94,.31);
 
         @include respond(phone) {
-            letter-spacing: .8rem;
+            letter-spacing: .5rem;
         }
     }   
 }
