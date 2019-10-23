@@ -15,8 +15,6 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Installing 
 
-**For test and modifications**
-
 Clone or download the project.
 
 install first
