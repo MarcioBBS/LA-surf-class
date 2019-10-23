@@ -557,6 +557,10 @@ body {
       .heading-primary--main {
         font-size: 5rem;
         letter-spacing: 1rem; } }
+    @media only screen and (max-width: 26em) {
+      .heading-primary--main {
+        font-size: 4rem;
+        letter-spacing: .5rem; } }
   .heading-primary--sub {
     display: block;
     font-size: 2rem;
@@ -565,7 +569,7 @@ body {
     animation: moveInRight 1s cubic-bezier(0.07, 0.22, 0.94, 0.31); }
     @media only screen and (max-width: 37.5em) {
       .heading-primary--sub {
-        letter-spacing: .8rem; } }
+        letter-spacing: .5rem; } }
 
 .heading-secondary {
   display: inline-block;
@@ -1377,6 +1381,9 @@ body {
     @media only screen and (max-width: 56.25em) {
       .row:not(:last-child) {
         margin-bottom: 6rem; } }
+  @media only screen and (max-width: 75em) {
+    .row {
+      max-width: 105rem; } }
   @media only screen and (max-width: 56.25em) {
     .row {
       max-width: 70rem;
@@ -1421,17 +1428,18 @@ body {
   position: relative; }
   @supports (-webkit-clip-path: ellipse(0 0)) or (clip-path: ellipse(0 0)) {
     .header {
-      height: 97vh;
+      height: 75vh;
       -webkit-clip-path: ellipse(100% 70% at 17% 30%);
       clip-path: ellipse(100% 70% at 17% 30%); } }
   @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 35.5em), only screen and (min-width: 125em) {
     .header {
       background-image: linear-gradient(to right bottom, rgba(69, 148, 231, 0.8), rgba(19, 62, 107, 0.8)), url(../img/pier.jpg); } }
-  @media only screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 75em) {
     .header {
-      height: 72vh; } }
+      height: 60vh; } }
   @media only screen and (max-width: 37.5em) {
     .header {
+      height: 63vh;
       -webkit-clip-path: ellipse(100% 70% at 30% 30%);
       clip-path: ellipse(100% 70% at 30% 30%); } }
   .header__logo-box {
@@ -1585,11 +1593,15 @@ body {
 .serction-about {
   background-color: #eee;
   padding: 25rem 0;
-  margin-top: -30vh; }
+  margin-top: -25vh; }
+  @media only screen and (max-width: 75em) {
+    .serction-about {
+      padding: 30rem 0;
+      margin-top: -23vh; } }
   @media only screen and (max-width: 56.25em) {
     .serction-about {
       padding: 20rem 0 27rem 0;
-      margin-top: -22vh; } }
+      margin-top: -18vh; } }
 
 .section-feature {
   padding: 15rem 0;
