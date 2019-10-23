@@ -6,7 +6,7 @@
         box-shadow: 0 1.5rem 4rem $rgba-color-black-2;
         z-index: 10;
         position: absolute;
-        outline-offset: 1.5rem;
+        outline-offset: 1.5rem;  // Sets the amount of space between an outline and the edge or border of an element. 
         transition: all .3s;
         border-radius: 50%;
 
@@ -79,7 +79,7 @@
         }
     }
 
-    // It means that hover the elements that are not hovered by composition_photo.
+    // Hover the elements that are not hovered by composition_photo.
     &:hover &__photo:not(:hover) {
         transform: scale(1.2) translateY(-1rem);
     }

@@ -16,6 +16,11 @@ $breakpoint argument choices:
 RESPONSIVE CHANGING ORDER: Base + typography + general layout + grid > page layout > components
 
 1em = 16px
+
+NOTE: In media queries rem and em are not affected by the root font-size settings. 
+      It means that 1rem or 1em are always equal to the font-size default browser value, which is 16px.
+
+Why using em instead of rem? Because rem's failed to work as intended in some browsers
 */
 @keyframes moveInLeft {
   0% {
@@ -31,10 +36,12 @@ RESPONSIVE CHANGING ORDER: Base + typography + general layout + grid > page layo
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(10rem); }
+    transform: translateX(10rem);
+    /* starting at -100px from right */ }
   80% {
     opacity: .5;
-    transform: translateX(-1.2rem); }
+    transform: translateX(-1.2rem);
+    /* at 80% push 12px to the left */ }
   100% {
     opacity: 1;
     transform: translateX(0); } }
@@ -42,7 +49,8 @@ RESPONSIVE CHANGING ORDER: Base + typography + general layout + grid > page layo
 @keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translateY(4rem); }
+    transform: translateY(4rem);
+    /* starting at 40px from the top */ }
   100% {
     opacity: 1;
     transform: translate(0); } }
@@ -50,7 +58,8 @@ RESPONSIVE CHANGING ORDER: Base + typography + general layout + grid > page layo
 @keyframes moveInTop {
   0% {
     opacity: 0;
-    transform: translateY(2rem); }
+    transform: translateY(2rem);
+    /* starting at 20px from the top */ }
   100% {
     opacity: 1;
     transform: translate(0); } }
@@ -63,11 +72,22 @@ RESPONSIVE CHANGING ORDER: Base + typography + general layout + grid > page layo
   box-sizing: inherit; }
 
 html {
-  /*
-    * 16px is the default value for most of the browsers.
-    * 62.5% of 16px is 10px (1rem = 10px; 10px/16px = 62.5%) which is equal to 1rem. 1rem is much easier to calculate throughout the website and more responsive robust.
-    */
-  font-size: 62.5%; }
+  /***
+     16px is the default value for most of the browsers.
+
+     62.5% of 16px is 10px (1rem = 10px; 10px/16px = 62.5%) which is equal to 1rem. 1rem is much easier to calculate throughout 
+     the website and more responsive robust.
+
+     (10/16 = .625) : Because 16 is the default value
+     (.625*16 = 10px) : Translate this value to 10px
+     Examples:
+      - if .625*20 then the root font size is 12.5 pixels.
+      - if .625*30 then the roor font size is 18.75 pixels.
+      - and so on....
+
+    ***/
+  font-size: 62.5%;
+  /* It defines what 1rem is! In this case 1rem = 10px. */ }
   @media only screen and (max-width: 75em) {
     html {
       font-size: 56.25%; } }
@@ -120,7 +140,8 @@ body {
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 1.5rem;
-    animation: moveInRight 1s cubic-bezier(0.07, 0.22, 0.94, 0.31); }
+    animation: moveInRight 1s cubic-bezier(0.07, 0.22, 0.94, 0.31);
+    /* 1:animation-name, 2:animation-duration, 3:animation-time-function  */ }
     @media only screen and (max-width: 37.5em) {
       .heading-primary--sub {
         letter-spacing: .5rem; } }
@@ -223,7 +244,13 @@ body {
   opacity: .5;
   overflow: hidden; }
   .bg-video__content {
-    height: inherit; }
+    height: inherit;
+    /*
+       MDN: The object-fit CSS property sets how the content of a replaced element, such as an <img> or <video>, should be resized to 
+       fit its container. 
+
+       it's similar to the [background-size: cover]
+       */ }
     @supports (-o-object-fit: cover) or (object-fit: cover) {
       .bg-video__content {
         object-fit: cover;
@@ -375,9 +402,18 @@ body {
   border-radius: 50% 65% 65% 50%; }
 
 .card {
+  /*
+    * The perspective property is used to give a 3D-positioned element some perspective.
+    * The perspective property defines how far the object is away from the user. So, a lower value will result in a more intensive 3D effect than a higher value.
+    * When defining the perspective property for an element, it is the CHILD elements that get the perspective view, NOT the element itself.
+    */
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
+  /* 
+    * to correct when the elements collpases. mainly caused when changes the float of the element. 
+    * In that case it was caused by the abolute position in the child element. The absolute position takes out the element from the natural flow.
+    */
   height: 50rem; }
   .card__side {
     height: 50rem;
@@ -440,6 +476,15 @@ body {
   .card__heading-span {
     padding: 1rem 1.6rem;
     border-radius: .5rem;
+    /*
+        * The box-decoration-break CSS property specifies how an element's fragments should be rendered when broken across multiple lines, 
+        * columns, or pages.
+        *
+        * The specified value will impact the appearance of the following properties: 
+        * background, border, border-image, box-shadow, clip-path, margin and padding
+        *
+        * In this case, it will impact the padding property above (padding: 1rem 1.5rem;) ! It will apply the padding to each line 
+        */
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone; }
     .card__heading-span--1 {
@@ -650,6 +695,11 @@ body {
   transition: all .3s; }
 
 .form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem); }
+
+.form__input:-ms-input-placeholder + .form__label {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-4rem); }

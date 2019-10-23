@@ -18,17 +18,17 @@
 @keyframes moveInRight {
     0% {
         opacity: 0;
-        transform: translateX(10rem);        
+        transform: translateX(10rem); /* starting at -100px from right */
     }
 
     80% {
         opacity: .5;
-        transform: translateX(-1.2rem);
+        transform: translateX(-1.2rem); /* at 80% push 12px to the left */
     }
 
     100% {
         opacity: 1;
-        transform: translateX(0);
+        transform: translateX(0); // at the orinal position.
     }
 
 }
@@ -36,23 +36,23 @@
 @keyframes moveInBottom {
     0% {
         opacity: 0;
-        transform: translateY(4rem);
+        transform: translateY(4rem); /* starting at 40px from the top */
     }
 
     100% {
         opacity: 1;
-        transform: translate(0);
+        transform: translate(0); // at the orinal position.
     }
 }
 
 @keyframes moveInTop {
     0% {
         opacity: 0;
-        transform: translateY(2rem);
+        transform: translateY(2rem); /* starting at 20px from the top */
     }
 
     100% {
         opacity: 1;
-        transform: translate(0);
+        transform: translate(0); // at the orinal position.
     }
 }

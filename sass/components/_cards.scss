@@ -1,9 +1,20 @@
 .card {
 
     // FUNCTIONALITY
+
+    /*
+    * The perspective property is used to give a 3D-positioned element some perspective.
+    * The perspective property defines how far the object is away from the user. So, a lower value will result in a more intensive 3D effect than a higher value.
+    * When defining the perspective property for an element, it is the CHILD elements that get the perspective view, NOT the element itself.
+    */
     perspective: 150rem;
     -moz-perspective: 150rem;
     position: relative;
+
+    /* 
+    * to correct when the elements collpases. mainly caused when changes the float of the element. 
+    * In that case it was caused by the abolute position in the child element. The absolute position takes out the element from the natural flow.
+    */
     height: 50rem; //card height    
 
     &__side {
@@ -12,8 +23,8 @@
         position: absolute;                       
         top: 0;
         left: 0;
-        width: 100%;
-        -webkit-backface-visibility: hidden; //  hide the back side of the element
+        width: 100%; // because the absolute position the elements width collpases. the correction for that is to set width to 100%;
+        -webkit-backface-visibility: hidden; // hide the back side of the element
         backface-visibility: hidden;
         border-radius: .5rem;
         overflow: hidden; //used to corrent the border-radius in the background-image.
@@ -39,6 +50,7 @@
         }
     }    
 
+    // When we hover the card, we want the card_side to be transformed (Rotated)! .card:hover .card_side.
     &:hover &__side--front {
         transform: rotateY(-180deg);
     }
@@ -106,8 +118,16 @@
         padding: 1rem 1.6rem;
         border-radius: .5rem;
 
-        //this property specifies how an element's fragments should be rendered when broken across multiple lines, columns, or pages.
-        box-decoration-break: clone; 
+        /*
+        * The box-decoration-break CSS property specifies how an element's fragments should be rendered when broken across multiple lines, 
+        * columns, or pages.
+        *
+        * The specified value will impact the appearance of the following properties: 
+        * background, border, border-image, box-shadow, clip-path, margin and padding
+        *
+        * In this case, it will impact the padding property above (padding: 1rem 1.5rem;) ! It will apply the padding to each line 
+        */
+        box-decoration-break: clone;  // Clone: Each box fragment is rendered independently with the specified border, padding, and margin wrapping each fragment.
         -webkit-box-decoration-break: clone;
 
         &--1 {

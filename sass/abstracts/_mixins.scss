@@ -28,7 +28,7 @@
         text-decoration: none;
         padding: 1.5rem 4rem;
         display: inline-block;        
-        border-radius: $border-radius ;
+        border-radius: $border-radius;
         transition: all .2s;
         font-size: 1.3rem;
         position: relative;
@@ -48,10 +48,10 @@
         }
     }
 
-    &:active,
+    &:active, 
     &:focus {
         outline: none;
-        transform: translateY(-1px);
+        transform: translateY(-1px); 
         box-shadow: 0 .7rem 1.5rem rgba($color-black, .2);
     }
 
@@ -88,7 +88,7 @@
 
     &--animated {
         animation: moveInBottom .6s ease-in-out .75s;
-        animation-fill-mode: backwards;
+        animation-fill-mode: backwards; // applys all the style of 0% before the animation starts 
     }
 }
 
@@ -118,6 +118,7 @@
 }
 // END - For the button styles and animations
 
+
 // MEDIA QUERY MANAGER
 /* 
 0 - 600px:     Phone
@@ -137,6 +138,11 @@ $breakpoint argument choices:
 RESPONSIVE CHANGING ORDER: Base + typography + general layout + grid > page layout > components
 
 1em = 16px
+
+NOTE: In media queries rem and em are not affected by the root font-size settings. 
+      It means that 1rem or 1em are always equal to the font-size default browser value, which is 16px.
+
+Why using em instead of rem? Because rem's failed to work as intended in some browsers
 */
 
 @mixin respond($breakpoint) {
