@@ -4,12 +4,19 @@
     width: 100%;
     z-index: -1;
     opacity: .5;
-    overflow: hidden;
+    overflow: hidden; // it's been used here because the video was overflow the page.
+
 
     &__content {        
         height: inherit;
 
-        @supports ((-o-object-fit: cover) or (object-fit: cover)) {            
+       /*
+       MDN: The object-fit CSS property sets how the content of a replaced element, such as an <img> or <video>, should be resized to 
+       fit its container. 
+
+       it's similar to the [background-size: cover]
+       */
+        @supports ((-o-object-fit: cover) or (object-fit: cover)) {       
             object-fit: cover;
             -o-object-fit: cover;
         }        

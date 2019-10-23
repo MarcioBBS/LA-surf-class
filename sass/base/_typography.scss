@@ -36,7 +36,7 @@ body {
         font-size: 2rem;
         font-weight: 700;
         letter-spacing: 1.5rem;
-        animation: moveInRight 1s cubic-bezier(.07,.22,.94,.31);
+        animation: moveInRight 1s cubic-bezier(.07,.22,.94,.31); /* 1:animation-name, 2:animation-duration, 3:animation-time-function  */
 
         @include respond(phone) {
             letter-spacing: .5rem;
@@ -60,7 +60,6 @@ body {
 
     @include respond(phone) {
         font-size: 2.5rem;
-        
     }
 
     @supports ((-webkit-background-clip: text) or (background-clip: text)) {
@@ -68,8 +67,8 @@ body {
         background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
         -webkit-background-clip: text;
         -moz-background-clip: text;
-        background-clip: text;
-        color: transparent;    
+        background-clip: text; // The background get clips exactly where the text is. It determines the background painting area, It clips the linear-gradiente to exactly the place where the text is.
+        color: transparent; // to clear the text on top of the background-image painting area.
     }
 
     &:hover {

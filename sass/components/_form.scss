@@ -15,7 +15,7 @@
         padding: 1.6rem 2.3rem;
         border: none;
         border-radius: 3px;
-        font-family: inherit;
+        font-family: inherit; // inherit from font family Lato!
         font-size: 1.6rem;
         background-color: rgba($color-white, .5);
         border-bottom: 3px solid $color-primary;
@@ -27,8 +27,12 @@
             width: 100%;         
         }
 
+         // sudo-class for when the element is on focus
         &:focus {
-            outline: none;
+            // outline border is blue by default. 
+            outline: none; // remove the blue border around the input field.
+
+             //Adding custom style while the input is on focus.
             box-shadow: 0 1.5rem 2.5rem rgba($color-black, .1);
             border-bottom: 3px solid $color-primary;
 
@@ -59,7 +63,15 @@
         transition: all .3s;
     }
 
-    &__input:placeholder-shown + &__label {
+    // The '+' means get the next siblin (below) selector
+    &__input:placeholder-shown + &__label { // When the placeholder is shown, then style the form__label.
+        opacity: 0; // Using opacity here because of the animation. Animation does not work with visibility:hidden property.
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+
+    // Polyfill for internet explorer
+    &__input:-ms-input-placeholder + &__label {
         opacity: 0;
         visibility: hidden;
         transform: translateY(-4rem);
@@ -83,7 +95,7 @@
     }
 
     &__radio-input {
-        opacity: 0;
+        opacity: 0; // This option is for acessibility when using TAB to switch/jump in html elements
     }
 
     &__radio-label {
@@ -93,6 +105,7 @@
         padding-left: 4rem;
     }
 
+    //The out circle
     &__radio-button {
         height: 3rem;
         width: 3rem;
@@ -103,6 +116,7 @@
         top: -.5rem;
         left: 0;
 
+        //The inner solid circle
         &::after {
             content: "";
             height: 1.5rem;
