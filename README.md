@@ -20,33 +20,7 @@ Clone or download the project.
 install first
 
 ```
-npm init
-```
-
-Install Sass
-
-```
-npm install node-sass --save-dev
-```
-
-Install live-server 
-
-```
-npm install live-server -g
-```
-
-Install concatenation 
-
-```
-$ npm install concat --save-dev
-
-```
-
-Install autoprefixer
-
-```
-$  npm install postcss-cli --save-dev
-$  $ npm install autoprefixer --save-dev
+npm install
 ```
 
 ## Built With
